@@ -1,0 +1,134 @@
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#lancamentos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('./layout.jpg');
+    height: 80vh;
+
+}
+#lancamentos #pass-for-cell{
+    display: none;
+}
+#lancamentos #carousel-ball{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+#lancamentos #carousel-ball div{
+    margin: 0 1px;
+}
+#lancamentos>header{
+    display: flex;
+    justify-content: center;
+}
+#lancamentos main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#lancamentos main .frame iframe{
+    height: 60vh;
+    width: 40vw;
+    min-width: 300px;
+    animation-name: example;
+    animation-duration: 4s;
+}
+#lancamentos main .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60vh;
+    min-width: 300px;
+    width: 40vw;
+    background-color: white;
+    font-size: 0.8em;
+    animation-name: example;
+    animation-duration: 4s;
+}
+#lancamentos main .info .info-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lancamentos main .info .info-main header{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 5px ;
+}
+#lancamentos main .info .info-main div{
+    display: flex;
+    flex-wrap: wrap;
+}
+#lancamentos main .info .info-main div div{
+    display: flex;
+    align-items: baseline;
+    margin: 0 5px;
+}
+#lancamentos main .info #other-info{
+    margin: 0 5px;
+}
+#lancamentos .pass{
+    color: white;
+}
+i:hover{
+    cursor: pointer;
+}
+div[ball]{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+}
+#lancamentos #icon-right{
+    display: flex;
+    align-items: center;
+}
+#lancamentos #icon-left{
+    display: flex;
+    align-items: center;
+}
+.checked {
+    color: orange;
+}
+.active{
+    background-color: #777;
+}
+.ball{
+    background-color: white;
+}
+@media (max-width: 845px){
+    #lancamentos  {
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+        background-image: url('./fotoCell.jpg');
+    }
+    #lancamentos #pass-for-cell{
+        display: block;
+    }
+    #lancamentos main .info{
+        width: 70vw;
+        font-size: 0.8em;
+    }
+    #lancamentos main #frame iframe{
+        width: 70vw;
+    }
+    #lancamentos #icon-right{
+        display: none;
+    }
+    #lancamentos #icon-left{
+        display: none;
+    }
+    #lancamentos #carousel-ball{
+        margin-top: 10px;
+    }
+}
+@media (max-height: 618px){
+    #other-info{
+        display: none;
+    }
+}
